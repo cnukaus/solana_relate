@@ -18,12 +18,7 @@ import web3, {
   ComputeBudgetInstruction,
   // StakeProgram,
 } from "@solana/web3.js";
-import BufferLayout, {
-  u8,
-  nu64,
-  struct,
-  Structure,
-} from "@solana/buffer-layout";
+
 import "dotenv/config";
 const stake_amount = 1;
 const receivers_keys: string[] = process.env.receive_wallets_keys!.split(",");

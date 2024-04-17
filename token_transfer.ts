@@ -14,12 +14,7 @@ import web3, {
   TransactionInstruction,
   // StakeProgram,
 } from "@solana/web3.js";
-import BufferLayout, {
-  u8,
-  nu64,
-  struct,
-  Structure,
-} from "@solana/buffer-layout";
+
 import "dotenv/config";
 // import {mnemoni}
 
