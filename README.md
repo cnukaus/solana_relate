@@ -10,4 +10,6 @@
 
 6.ts-node token_transfer.ts
 
-7.质押的话在 jup_token_stake.ts 里修改 amount，然后 ts-node
+7.质押的话在 jup_token_stake.ts 里修改 amount，然后 ts-node jup_token_stake.ts
+
+8.转 sol 请访问 cointool
