@@ -16,6 +16,7 @@ import web3, {
   VersionedTransaction,
   TransactionInstruction,
   ComputeBudgetInstruction,
+  
   // StakeProgram,
 } from "@solana/web3.js";
 
@@ -60,14 +61,19 @@ async function stake(stake_amount: number) {
           isWritable: true,
         },
         {
-          pubkey: new PublicKey("EqvrJY2ATgyh94SUixgUkjRc1abSnAHV3ifHdGq8KZzp"),
+          pubkey: new PublicKey("AgkHWRJqy6uh2AJ5M6gPCYzE1oF3vMYCUQDRegiUQjgv"),
           isSigner: false,
           isWritable: true,
         },
+        // {
+        //   pubkey: new PublicKey("2exTK1vzJCsmPm7qzA8p1ij1jmUcnL8ppkWjsUWWQMQQ"),
+        //   isWritable: true,
+        //   isSigner: false,
+        // },
         {
-          pubkey: new PublicKey("2exTK1vzJCsmPm7qzA8p1ij1jmUcnL8ppkWjsUWWQMQQ"),
+          pubkey: new PublicKey(keypair.publicKey.toString()),
+          isSigner: true,
           isWritable: true,
-          isSigner: false,
         },
         {
           pubkey: new PublicKey(keypair.publicKey.toString()),
@@ -75,24 +81,30 @@ async function stake(stake_amount: number) {
           isWritable: true,
         },
         {
-          pubkey: sourceAccount.address,
-          isSigner: false,
-          isWritable: true,
-        },
-        {
-          pubkey: new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
+          pubkey: new PublicKey("11111111111111111111111111111111"),
           isSigner: false,
           isWritable: false,
         },
       ],
-      data: Buffer.concat([Buffer.from("05a87635482ecb92", "hex"), data]),
+      data: Buffer.from("d8b68f0bdc2656b9", "hex"),
       // data,
       programId: new PublicKey("voTpe3tHQ7AjQHMapgSue2HJFAh2cGsdokqN3XqmVSj"),
     });
     // const hexData =
 
+    const associatedTokenAccount = await getOrCreateAssociatedTokenAccount(
+      mainnet_connection,
+      keypair,
+      mintPublicKey,
+      toAccount.publicKey,programId:new PublicKey("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL")
+  );
     transaction.add(first_instruction);
 
+    const second_instruction = new TransactionInstruction({
+      keys:[
+
+      ]
+    })
     // transaction.add(new ComputeBudgetInstruction())
     const computeUnitLimitInstruction =
       ComputeBudgetProgram.setComputeUnitLimit({
