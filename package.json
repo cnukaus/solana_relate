@@ -11,12 +11,21 @@
   "license": "ISC",
   "dependencies": {
     "@coral-xyz/borsh": "^0.30.0",
+    "@project-serum/borsh": "^0.2.5",
     "@solana/buffer-layout": "^4.0.1",
     "@solana/spl-token": "^0.4.3",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
     "@solana/web3.js": "^1.91.4",
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "bn.js": "^5.2.1",
     "borsh": "^2.0.0",
     "bs58": "^5.0.0",
     "buffer-layout": "^1.2.2",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.5"
   }
 }

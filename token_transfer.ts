@@ -21,6 +21,7 @@ import BufferLayout, {
   Structure,
 } from "@solana/buffer-layout";
 import "dotenv/config";
+// import {mnemoni}
 
 const main_key: string = process.env.main_wallet_key!;
 const receivers_keys: string[] = process.env.receive_wallets_keys!.split(",");
@@ -137,3 +138,5 @@ async function main(send_amount: number, token_contract: string) {
     }
   }
 }
+
+export { create_wallet };
