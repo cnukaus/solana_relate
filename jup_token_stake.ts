@@ -31,7 +31,7 @@ const stake_amount = 0.01;
 const receivers_keys: string[] = process.env.receive_wallets_keys!.split(",");
 
 const solana_rpc = "https://api.mainnet-beta.solana.com";
-throw Error("stop");
+// throw Error("stop");
 const mainnet_connection = new Connection(solana_rpc, {
   commitment: "confirmed",
 });
