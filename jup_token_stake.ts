@@ -27,11 +27,11 @@ import anchor, { Instruction } from "@coral-xyz/anchor";
 // import stkae_program_idl from "./locked_voter.json";
 import "dotenv/config";
 
-const stake_amount = 0.1;
+const stake_amount = 0.01;
 const receivers_keys: string[] = process.env.receive_wallets_keys!.split(",");
 
 const solana_rpc = "https://api.mainnet-beta.solana.com";
-
+throw Error("stop");
 const mainnet_connection = new Connection(solana_rpc, {
   commitment: "confirmed",
 });
