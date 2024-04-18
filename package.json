@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@coral-xyz/anchor": "^0.30.0",
     "@coral-xyz/borsh": "^0.30.0",
     "@project-serum/borsh": "^0.2.5",
     "@solana/buffer-layout": "^4.0.1",
