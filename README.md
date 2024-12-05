@@ -1,8 +1,8 @@
 1.npm i
 
-2.npm ts-node -g
+2.npm i ts-node -g
 
-3.npm typescript -g
+3.npm i typescript -g
 
 4.按照.env.example 设置主钱包，子钱包.保存文件，子钱包私钥由,隔开
 
